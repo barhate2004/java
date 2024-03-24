@@ -1,0 +1,90 @@
+
+Q1.
+import java.util.*;
+public class Equal
+{
+    public static void main(String[] args)
+    {
+        Scanner sc= new Scanner(System.in);
+
+        System.out.println("enter first string");
+        String str1 = sc.next();
+
+        System.out.println("enter second string");
+        String str2=sc.next();
+
+        if(str1.equals(str2))
+        System.out.println("Equal string");
+        else
+            System.out.println("not equal");
+    }
+}
+______________________________________________________________________________________
+Q2.
+import java.awt.*;
+import javax.swing.*;
+import java.awt.event.*;
+
+public class Calculator extends JFrame
+{
+    private JTextField t1;
+    private JButton b0,b1,b2,b3,b4,b5,b6,b7,b8,b9,b_add,b_sub,b_mul,b_div,bp,b_ans,b_clear;
+    private JPanel p1;
+
+    public Calculator(String s)
+    {
+        super(s);
+
+
+        t1=new JTextField(20);
+
+        b0=new JButton("0");
+        b1=new JButton("1");
+        b2=new JButton("2");
+        b3=new JButton("3");
+        b4=new JButton("4");
+        b5=new JButton("5");
+        b6=new JButton("6");
+        b7=new JButton("7");
+        b8=new JButton("8");
+        b9=new JButton("9");
+        b_add=new JButton("+");
+        b_sub=new JButton("-");
+        b_mul=new JButton("*");
+        b_div=new JButton("/");
+        b_ans=new JButton("=");
+        bp=new JButton(".");
+        b_clear=new JButton("clear");
+
+        p1=new JPanel();
+        setLayout(null);
+        t1.setBounds(50,25,300,30);
+
+        p1.setLayout(new GridLayout(4,4,10,10));
+        p1.setBounds(50,100,200,300);
+        b_clear.setBounds(150,420,150,50);
+        p1.add(b7);p1.add(b8);p1.add(b9);p1.add(b_div);
+        p1.add(b4);p1.add(b5);p1.add(b6);p1.add(b_mul);
+        p1.add(b1);p1.add(b2);p1.add(b3);p1.add(b_sub);
+        p1.add(bp);p1.add(b0);p1.add(b_ans);p1.add(b_add);
+
+        add(t1);
+        add(p1);
+        add(b_clear);
+        setSize(420,550);
+        setVisible(true);
+
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }
+
+    public static void main(String arg[])
+    {
+        new Calculator("calculator");
+    }
+
+
+
+}
+
+
+

@@ -1,0 +1,25 @@
+Q1>
+import java.util.*;
+public class Arraysum
+{
+ public static void main(String[] arg)
+ {
+   Scanner sc=new Scanner(System.in);
+   System.out.println("enter how many numbers you want in array");
+   int n=sc.nextInt();
+   
+   int[] a=new int[n];
+   for(int i=0;i<a.length;i++)
+   {
+    System.out.print("enter number");
+    a[i]=sc.nextInt();
+   } 
+   int sum=0; 
+   for(int i=0;i<a.length;i++)
+   {
+    sum=sum+a[i];
+   }
+   System.out.println("sum of array elements is "+sum);
+ }
+}
+_______________________________________________________________________________________________________________________

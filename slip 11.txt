@@ -1,0 +1,76 @@
+
+Q-1>
+public class Mydate {
+    private int dd;
+    private int mm;
+    private int yy;
+
+    public Mydate()
+    {
+        this.dd = 0;
+        this.mm = 0;
+        this.yy = 0;
+    }
+
+    public Mydate(int var1, int var2, int var3)
+    {
+        this.dd = var1;
+        this.mm = var2;
+        this.yy = var3;
+    }
+
+    public void display()
+    {
+        System.out.println(this.dd + "/" + this.mm + "/" + this.yy);
+    }
+
+    public static void main(String[] var0)
+    {
+        Mydate var1 = new Mydate();
+        var1.display();
+        Mydate var2 = new Mydate(9, 1, 2024);
+        var2.display();
+    }
+}
+______________________________________________________________________________________________
+Q2
+import java.io.*;
+import java.util.*;
+public class Dos{
+    public static void main(String args[])
+    {
+    int cid;
+    String cname,caddr;
+    long mno;
+    try
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("how many data  you want to enter");
+        int n=sc.nextInt();
+
+
+        for(int i=0;i<n;i++)
+        {
+            System.out.println("enter cid,name,address and mobile no");
+            cid=sc.nextInt();
+            cname=sc.next();
+            caddr=sc.next();
+            mno=sc.nextLong();
+
+            DataOutputStream dos=new DataOutputStream(new FileOutputStream("xyz.txt",true));
+            dos.writeInt(cid);
+            dos.writeUTF(cname);
+            dos.writeUTF(caddr);
+            dos.writeLong(mno);
+        }
+    }
+    catch(FileNotFoundException e)
+    {
+        System.out.println(e);
+    }
+    catch(IOException e)
+    {
+        System.out.println(e);
+    }
+}
+}

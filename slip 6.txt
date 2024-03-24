@@ -1,0 +1,23 @@
+Q1>
+public class Tostring
+{
+    int eid,esal;
+    String ename,edesgin;
+
+    public Tostring(int id,String name,int sal,String desgn)
+    {
+        eid=id;
+        ename=name;
+        esal=sal;
+        edesgin=desgn;
+    }
+    public static void main(String args[])
+    {
+        Tostring e=new Tostring(1,"kartik",20000,"Hr");
+        System.out.println(e);
+    }
+    public String toString()
+    {
+        return("id is"+eid+" name is :"+ename+" salary is "+esal+" designation is: "+edesgin);
+    }
+}

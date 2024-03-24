@@ -1,0 +1,43 @@
+public class Person {
+    String pname;
+    long pmno;
+    public static void main(String args[])
+    {
+        Person p1=new Person();
+        Person p2=new Person();
+        System.out.println("hashcode are "+p1.hashCode()+" "+p2.hashCode());
+
+        if(p1.hashCode()==p2.hashCode())
+        System.out.println("hashcode are same");
+        else
+            System.out.println("hashcode are different");
+
+    }
+}
+___________________________________________________________________________________________
+
+import java.io.*;
+public class Copy {
+    public static void main(String args[])
+    {
+        try
+        {
+            DataInputStream dis=new DataInputStream(new FileInputStream("dis.txt"));
+            DataOutputStream dos=new DataOutputStream(new FileOutputStream("dos.txt"));
+
+            int b;
+            while((b=dis.read())!=-1)
+            {
+                dos.writeChar(b-32);
+            }
+        }
+        catch(FileNotFoundException e)
+        {
+            System.out.println(e);
+        }
+        catch(IOException e)
+        {
+            System.out.println(e);
+        }
+    }
+}

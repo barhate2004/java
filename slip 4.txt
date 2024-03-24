@@ -1,0 +1,66 @@
+Q1>
+import java.util.*;
+public class Greet {
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter name");
+        String name=sc.next();
+        name=name.toUpperCase();
+        System.out.println("HELLO,"+name+",nice to meet you");
+
+    }
+}
+
+_____________________________________________________________________________________________________________
+Q2>
+import java.awt.*;
+import javax.swing.*;
+import java.awt.event.*;
+
+public class Lang extends JFrame implements ActionListener
+{
+ private JLabel l1;
+ private JComboBox c1;
+ private JButton b1;
+
+ public Lang(String s)
+ {
+  super(s);
+  
+  l1=new JLabel("programming language selected :");
+  String s1[]={"C","C++","C#","Java","PHP"};
+  c1=new JComboBox(s1);
+  
+  b1=new JButton("show");
+  
+ 
+  
+  l1.setBounds(100,50,300,30);
+  
+  c1.setBounds(70,150,80,30);
+  b1.setBounds(200,150,80,30);
+  add(l1);add(c1);
+  
+  add(b1);
+
+  setLayout(null);
+  setSize(400,400);
+  setVisible(true);
+  
+  setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+  b1.addActionListener(this);
+ }
+ 
+ public void actionPerformed(ActionEvent e)
+ {
+ String data="programming language selected :"+c1.getItemAt(c1.getSelectedIndex());
+  l1.setText(data);
+ }
+ 
+ public static void main(String arg[])
+ {
+  new Lang("count words and characters");
+ }
+
+}

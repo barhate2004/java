@@ -1,0 +1,58 @@
+import java.util.*;
+public class Colorpoint extends Point{
+    private String color;
+
+    public Colorpoint()
+    {
+        super();
+        color="black";
+    }
+
+    public Colorpoint(int x,int y,String color)
+    {
+        super(x,y);
+        this.color=color;
+    }
+    public void display()
+    {
+        super.display();
+        System.out.println("color is :"+color);
+    }
+
+
+}
+
+
+import java.util.*;
+public class Point{
+    private int x,y;
+
+    public Point()
+    {
+        x=0;
+        y=0;
+    }
+
+    public Point(int x,int y)
+    {
+        this.x=x;
+        this.y=y;
+    }
+    public void display()
+    {
+        System.out.println("x cordinate is :"+x+" y cordinate is :"+y);
+    }
+
+}
+
+
+import java.util.*;
+public class Ptest {
+    public static void main(String args[])
+    {
+        Point p[]=new Point[1];
+        p[0]=new Colorpoint(4,4,"red");
+        p[0].display();
+    }
+}
+

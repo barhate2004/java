@@ -1,0 +1,25 @@
+Q1>
+import java.io.*;
+public class SD {
+    int rollno;
+    String name,cls;
+    float per;
+
+    public static void main(String args[]) throws IOException
+    {
+        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+        SD s=new SD();
+
+        System.out.println("enter rollno name,,class and percentage");
+        s.rollno=Integer.parseInt(br.readLine());
+        s.name=br.readLine();
+        s.cls=br.readLine();
+        s.per=Float.parseFloat(br.readLine());
+
+        s.display();
+    }
+    public void display()
+    {
+        System.out.println("roll no "+rollno+ " name is "+name+" class "+cls+" percantage "+per);
+    }
+}

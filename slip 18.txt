@@ -1,0 +1,25 @@
+Q1>
+
+import java.util.*;
+public class Arrmin {
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("how many number you want to enter in array");
+        int n=sc.nextInt();
+
+        int arr[]=new int[n];
+        for(int i=0;i<n;i++)
+        {
+            System.out.println("enter number");
+            arr[i]=sc.nextInt();
+        }
+        int min=arr[0];
+        for(int i=0;i<n;i++)
+        {
+            if(min>arr[i])
+                min=arr[i];
+        }
+        System.out.println("minimum vlue in array is "+min);
+    }
+}

@@ -1,0 +1,84 @@
+Q 1>
+
+import java.util.*;
+public class Arrmax {
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("how many number you want to enter in array");
+        int n=sc.nextInt();
+
+        int arr[]=new int[n];
+        for(int i=0;i<n;i++)
+        {
+            System.out.println("enter number");
+            arr[i]=sc.nextInt();
+        }
+       int max=arr[0];
+        for(int i=0;i<n;i++)
+        {
+            if(max<arr[i])
+                max=arr[i];
+        }
+        System.out.println("maximum values in array is "+max);
+        }
+    }
+_____________________________________________________________________________________________
+
+Q2.
+
+public class Developer extends Emp
+{
+    private String pname;
+    public Developer()
+    {
+        super();
+        pname="";
+    }
+    public Developer(String name,int sal,String pname)
+    {
+        super(name,sal);
+        this.pname=pname;
+    }
+    public void display()
+    {
+        super.display();
+        System.out.println("project name is "+pname);
+    }
+}
+
+
+import java.util.*;
+public class Emp {
+        private int sal;
+        private String name;
+
+        public Emp()
+        {
+            name = "ABC";
+            sal = 0;
+        }
+        public Emp(String name,int sal)
+        {
+            this.name=name;
+            this.sal=sal;
+        }
+        public void display()
+        {
+            System.out.println("name is "+name+" sal is "+sal);
+        }
+}
+
+
+
+public class Etest {
+    public static void main(String args[])
+    {
+        Emp p=new Developer("kartik",22000,"java");
+        p.display();
+    }
+}
+
+
+
+

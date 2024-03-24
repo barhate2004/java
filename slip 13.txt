@@ -1,0 +1,54 @@
+Q-1>
+public class Prime
+{
+ public static void main(String[] arg)
+ {
+ int i,j;
+ System.out.println("prime numbers between 1 to 100 are as follow:");
+ for(i=1;i<=100;i++)
+ {
+  for(j=2;j<=i/2;j++)
+  {
+   if(i%j==0)
+   break;
+  }
+  if(j==(i/2)+1)
+  System.out.println(i);
+ }
+ }
+}
+_________________________________________________________________
+Q2>
+public class InvalidageException extends Exception{
+    public InvalidageException(String s)
+    {
+        super(s);
+    }
+}
+
+******************************
+public class Student {
+    int rollno,age;
+    String course,name;
+    public Student(int rollno,int age,String name,String course)
+    {
+        this.rollno=rollno;
+        this.age=age;
+        this.name=name;
+        this.course=course;
+    }
+    public static void main(String args[])
+    {
+        try
+        {
+         Student s=new Student(1,20,"kartik","BCA");
+         if(s.age<15 || s.age>21)
+             throw new InvalidageException("invalid age");
+         System.out.println("valid age");
+        }
+        catch(InvalidageException e)
+        {
+            System.out.println(e);
+        }
+    }
+}

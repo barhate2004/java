@@ -1,0 +1,59 @@
+Q2.
+
+import java.util.*;
+public class Employee {
+    private String name;
+    private int salary;
+
+    public Employee()
+    {
+        name = "ABC";
+        salary = 0;
+    }
+    public Employee(String name,int salary)
+    {
+        this.name=name;
+        this.salary=salary;
+    }
+
+    public void display ()
+        {
+            System.out.println(" name :" + name + " salary :" + salary);
+        }
+    }
+
+
+
+public class Emptest
+{
+    public static void main(String args[])
+    {
+        Employee p=new Programmer("kartik",20000,"java");
+        p.display();
+    }
+}
+
+
+
+
+public class Programmer extends Employee
+{
+    private String lange;
+    public Programmer()
+    {
+        super();
+        lange="";
+    }
+    public Programmer(String name,int salary,String lange)
+    {
+        super(name,salary);
+        this.lange=lange;
+    }
+    public void display()
+    {
+        super.display();
+        System.out.println("programming language name is : "+lange);
+    }
+
+}
+
